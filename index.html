@@ -25,7 +25,11 @@
           console.log(data);
           data.map(function (image) {
             var _ = $("<img>");
-            _.attr("src", image.imageFileName);
+            _.attr(
+              "src",
+              "https://media.githubusercontent.com/media/alessandro-aglietti/scialp/master/" +
+                image.imageFileName,
+            );
             _.addClass("webcam");
             _.appendTo("#container");
           });
