@@ -3,9 +3,10 @@ import fs from "node:fs";
 import imageUrls from "./imageUrls";
 import axios from "axios";
 
-async function retrieveImage(imageUrl) {
+async function retrieveImage(imageUrl, imageName) {
   const _ = {
     _: new Date(),
+    imageName,
     imageUrlSha256: createHash("sha256").update(imageUrl).digest("hex"),
   };
 
@@ -17,7 +18,7 @@ async function retrieveImage(imageUrl) {
     });
 
     _.responseAt = new Date();
-    _.imageFileName = `${_.imageUrlSha256}.${imageUrl.slice(-3)}`;
+    _.imageFileName = `images/${imageName}.${imageUrl.slice(-3)}`;
 
     response.data.pipe(fs.createWriteStream(_.imageFileName));
 
@@ -32,7 +33,10 @@ async function retrieveImage(imageUrl) {
 async function index() {
   const result = await Promise.all(
     imageUrls.map(async (image) => {
-      const _ = await retrieveImage(image.url);
+      const imageName = `${image.imageNamePrefix}_${
+        new Date().toISOString().split("T")[0]
+      }_${image.imageHour}`;
+      const _ = await retrieveImage(image.url, imageName);
       return {
         ...image,
         ..._,
