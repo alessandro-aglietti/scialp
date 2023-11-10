@@ -30,8 +30,17 @@ async function retrieveImage(imageUrl) {
 }
 
 async function index() {
-  const _ = await retrieveImage(imageUrls[0].url);
-  console.log(_, new Date());
+  const result = await Promise.all(
+    imageUrls.map(async (image) => {
+      const _ = await retrieveImage(image.url);
+      return {
+        ...image,
+        ..._,
+      };
+    }),
+  );
+
+  console.log(result, new Date());
 
   return 0;
 }
