@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import fs from "node:fs";
 import imageUrls from "./imageUrls";
 import axios from "axios";
+import uniqWith from "lodash/uniqWith";
 
 async function retrieveImage(imageUrl, imageName) {
   const _ = {
@@ -44,7 +45,21 @@ async function index() {
     }),
   );
 
-  console.log(result, new Date());
+  const images = JSON.parse(fs.readFileSync("images.json"));
+
+  images.push(...result);
+
+  const uniques = uniqWith(images, (a, b) => a.imageName === b.imageName);
+
+  fs.writeFileSync(
+    "images.json",
+    JSON.stringify(
+      uniques.sort((a, b) => a.imageName > b.imageName),
+      null,
+      2,
+    ),
+    "utf8",
+  );
 
   return 0;
 }
