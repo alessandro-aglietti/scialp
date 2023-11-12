@@ -22,7 +22,10 @@ async function retrieveImage(imageUrl, imageName) {
     _.imageFileName = `images/${imageName}.${imageUrl.slice(-3)}`;
 
     response.data.pipe(fs.createWriteStream(_.imageFileName));
-
+    await new Promise((resolve, reject) => {
+      response.data.on("end", resolve);
+      response.data.on("error", reject); // or something like that. might need to close `hash`
+    });
     _.pipedAt = new Date();
 
     _.imageHash = createHash("sha256")
