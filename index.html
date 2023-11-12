@@ -32,15 +32,11 @@
           for (var i = 0; i < data.length; i++) {
             var image = data[i];
 
-            var prevImageDate = new Date(1970, 1, 1);
+            var prevImageDate =
+              i > 0 ? new Date(data[i - 1]._) : new Date(1970, 1, 1);
             var imageDate = new Date(image._).toISOString().split("T")[0];
 
-            if (i > 0) {
-              var prevImage = data[i - 1];
-              prevImageDate = new Date(prevImage._).toISOString().split("T")[0];
-            }
-
-            if (imageDate > prevImageDate) {
+            if (imageDate > prevImageDate.toISOString().split("T")[0]) {
               var dateTitle = $("<h3>");
               dateTitle.text(imageDate);
               dateTitle.appendTo("#pescegallo_seggiovia");
