@@ -24,6 +24,10 @@ async function retrieveImage(imageUrl, imageName) {
     response.data.pipe(fs.createWriteStream(_.imageFileName));
 
     _.pipedAt = new Date();
+
+    _.imageHash = createHash("sha256")
+      .update(fs.readFileSync(_.imageFileName))
+      .digest("hex");
   } catch (e) {
     _.e = e;
   }
