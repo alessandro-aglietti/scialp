@@ -57,6 +57,9 @@
             _.addClass("webcam");
             _.appendTo("#" + image.imageNamePrefix);
           }
+
+          const lastImage = data.pop();
+          $("h1").text("last @" + lastImage._ + " next~1h");
         });
       });
     </script>
