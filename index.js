@@ -3,9 +3,15 @@ import fs from "node:fs";
 import axios from "axios";
 import uniqWith from "lodash/uniqWith";
 
+function romeNow() {
+  return new Date(
+    new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }),
+  );
+}
+
 async function retrieveImage(imageUrl, imageName) {
   const _ = {
-    _: new Date(),
+    _: romeNow(),
     imageName,
     imageUrlSha256: createHash("sha256").update(imageUrl).digest("hex"),
   };
@@ -17,7 +23,7 @@ async function retrieveImage(imageUrl, imageName) {
       responseType: "stream",
     });
 
-    _.responseAt = new Date();
+    _.responseAt = romeNow();
     _.imageFileName = `images/${imageName}.${imageUrl.slice(-3)}`;
 
     response.data.pipe(fs.createWriteStream(_.imageFileName));
@@ -25,7 +31,7 @@ async function retrieveImage(imageUrl, imageName) {
       response.data.on("end", resolve);
       response.data.on("error", reject);
     });
-    _.pipedAt = new Date();
+    _.pipedAt = romeNow();
 
     _.imageHash = createHash("sha256")
       .update(fs.readFileSync(_.imageFileName))
@@ -38,9 +44,7 @@ async function retrieveImage(imageUrl, imageName) {
 }
 
 async function index() {
-  const now = new Date(
-    new Date().toLocaleString("en-US", { timeZone: "Europe/Rome" }),
-  );
+  const now = romeNow();
   const result = [];
   const image = {
     url: "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc2.jpg",
