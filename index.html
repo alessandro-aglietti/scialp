@@ -53,6 +53,11 @@
               "https://media.githubusercontent.com/media/alessandro-aglietti/scialp/master/" +
                 image.imageFileName,
             );
+
+            _.attr("loading", "lazy");
+
+            _.attr("alt", image.imageName);
+
             _.addClass("webcam");
             _.appendTo("#" + image.imageNamePrefix);
           }
