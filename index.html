@@ -11,14 +11,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
       img {
-        width: 20%;
+        width: 100%;
+      }
+
+      .container {
+        float: left;
+        width: 50%;
       }
     </style>
   </head>
 
   <body>
     <h1>Random Planet Facts</h1>
-    <div id="container"></div>
+    <div id="pescegallo_seggiovia" class="container"></div>
+    <div id="pescegallo_parcheggio" class="container"></div>
     <script>
       $(function () {
         $.get("images.json", function (data) {
@@ -31,7 +37,7 @@
                 image.imageFileName,
             );
             _.addClass("webcam");
-            _.appendTo("#container");
+            _.appendTo("#" + image.imageNamePrefix);
           });
         });
       });
