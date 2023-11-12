@@ -15,9 +15,19 @@ export default [
     imageHour: "08",
   },
   {
+    url: "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc1.jpg",
+    imageNamePrefix: "pescegallo_seggiovia",
+    imageHour: "09",
+  },
+  {
     url: "https://www.pescegallovalgerola.it/webcam/webcam_day/hour10.jpg",
     imageNamePrefix: "pescegallo_seggiovia",
     imageHour: "10",
+  },
+  {
+    url: "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc1.jpg",
+    imageNamePrefix: "pescegallo_seggiovia",
+    imageHour: "11",
   },
   {
     url: "https://www.pescegallovalgerola.it/webcam/webcam_day/hour12.jpg",
@@ -25,9 +35,19 @@ export default [
     imageHour: "12",
   },
   {
+    url: "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc1.jpg",
+    imageNamePrefix: "pescegallo_seggiovia",
+    imageHour: "13",
+  },
+  {
     url: "https://www.pescegallovalgerola.it/webcam/webcam_day/hour14.jpg",
     imageNamePrefix: "pescegallo_seggiovia",
     imageHour: "14",
+  },
+  {
+    url: "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc1.jpg",
+    imageNamePrefix: "pescegallo_seggiovia",
+    imageHour: "15",
   },
   {
     url: "https://www.pescegallovalgerola.it/webcam/webcam_day/hour16.jpg",
@@ -60,9 +80,19 @@ export default [
     imageHour: "08",
   },
   {
+    url: "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc2.jpg",
+    imageNamePrefix: "pescegallo_parcheggio",
+    imageHour: "09",
+  },
+  {
     url: "https://www.pescegallovalgerola.it/webcam/webcam_day/pescegallo_00_hour_10.jpg",
     imageNamePrefix: "pescegallo_parcheggio",
     imageHour: "10",
+  },
+  {
+    url: "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc2.jpg",
+    imageNamePrefix: "pescegallo_parcheggio",
+    imageHour: "11",
   },
   {
     url: "https://www.pescegallovalgerola.it/webcam/webcam_day/pescegallo_00_hour_12.jpg",
@@ -70,9 +100,19 @@ export default [
     imageHour: "12",
   },
   {
+    url: "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc2.jpg",
+    imageNamePrefix: "pescegallo_parcheggio",
+    imageHour: "13",
+  },
+  {
     url: "https://www.pescegallovalgerola.it/webcam/webcam_day/pescegallo_00_hour_14.jpg",
     imageNamePrefix: "pescegallo_parcheggio",
     imageHour: "14",
+  },
+  {
+    url: "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc2.jpg",
+    imageNamePrefix: "pescegallo_parcheggio",
+    imageHour: "15",
   },
   {
     url: "https://www.pescegallovalgerola.it/webcam/webcam_day/pescegallo_00_hour_16.jpg",
