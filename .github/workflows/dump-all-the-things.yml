@@ -3,7 +3,7 @@ name: thanks for the free crontabs
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "30 8,10,12,14,16,17 * * *"
+    - cron: "30 6,7,8,10,12,14,16,17,18 * * *"
 
 permissions:
   contents: write
