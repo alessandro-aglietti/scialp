@@ -30323,5 +30323,29 @@
     "imageFileName": "images/pescegallo_seggiovia_2024-02-11_11.jpg",
     "pipedAt": "2024-02-11T11:18:43.000Z",
     "imageHash": "e6cb05168d1ebafa415882dca7ca9defb16afa0a82407b9b1c06101a5ae4ee99"
+  },
+  {
+    "url": "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc2.jpg",
+    "imageNamePrefix": "pescegallo_parcheggio",
+    "imageHour": "13",
+    "_": "2024-02-11T13:29:41.000Z",
+    "imageName": "pescegallo_parcheggio_2024-02-11_13",
+    "imageUrlSha256": "f9b759575613ffa45e41d02b1f780d7eb72ac9c84278eb9105572055377f64ad",
+    "responseAt": "2024-02-11T13:29:42.000Z",
+    "imageFileName": "images/pescegallo_parcheggio_2024-02-11_13.jpg",
+    "pipedAt": "2024-02-11T13:29:43.000Z",
+    "imageHash": "ba65c6492e2e51882848619bd1f07e96ab79ccf090d1cccb10124340849a0615"
+  },
+  {
+    "url": "https://www.pescegallovalgerola.it/webcam/webcam/fupeswc1.jpg",
+    "imageNamePrefix": "pescegallo_seggiovia",
+    "imageHour": "13",
+    "_": "2024-02-11T13:29:43.000Z",
+    "imageName": "pescegallo_seggiovia_2024-02-11_13",
+    "imageUrlSha256": "58a965bb860f503b87d58a8fffed54e063d216ff106bcf9f426471aa1300ff7e",
+    "responseAt": "2024-02-11T13:29:43.000Z",
+    "imageFileName": "images/pescegallo_seggiovia_2024-02-11_13.jpg",
+    "pipedAt": "2024-02-11T13:29:43.000Z",
+    "imageHash": "f4c120938e0295a5604f5e6191d5539980481b66703dd7e4f706812dae82c382"
   }
 ]
